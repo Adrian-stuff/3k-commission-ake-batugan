@@ -1,0 +1,13 @@
+CREATE DATABASE SimpleAuthDB;
+GO
+
+USE SimpleAuthDB;
+GO
+
+CREATE TABLE Users (
+    Id INT PRIMARY KEY IDENTITY(1,1),
+    Username NVARCHAR(50) UNIQUE NOT NULL,
+    PasswordHash NVARCHAR(256) NOT NULL,
+    ProfileImageBase64 NVARCHAR(MAX) NULL
+);
+GO
